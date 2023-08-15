@@ -1,0 +1,16 @@
+@font-face {
+  font-family: OpenSans;
+  src: url(../fonts/Inter-Regular.ttf);
+}
+
+@font-face {
+  font-family: OpenSansSemiBold;
+  src: url(../fonts/Inter-SemiBold.ttf);
+}
+
+
+$font-family: OpenSans, Arial, Helvetica, sans-serif;
+$font-family-bold: OpenSansSemiBold;
+$text: #4a4a4a;
+$blue: #2196f3;
+$gray: #a0b0b9;
