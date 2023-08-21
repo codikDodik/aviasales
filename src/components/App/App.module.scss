@@ -1,11 +1,18 @@
 @import '../../assets/style-variable/variables.scss';
 
+html, body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F3F7FA;
+}
+
 .App {
   text-align: center;
-  max-width: 960px;
+  width: 960px;
   background-color: #F3F7FA;
   min-height: 100vh;
-  margin: 0;
   &__main{
     display: flex;
   }

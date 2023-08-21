@@ -1,8 +1,8 @@
 @import '../../assets/style-variable/variables.scss';
 
 .filter{
-  width: 230px;
-  height: fit-content;
+  min-width: 230px;
+  height: 250px;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -15,21 +15,45 @@
     padding-top: 20px;
     padding-left: 20px;
     color: #4A4A4A;
+    font-size: 14px;
+    align-self: flex-start;
+    font-family: $font-family-bold;
+  }
+
+  &__text{
+    color: #4A4A4A;
     font-size: 13px;
     align-self: flex-start;
     font-family: $font-family;
-    font-style: normal;
+    padding-left: 10px;
+    position: relative;
+    bottom: 5px;
   }
 
   &__list{
-    padding-left: 20px;
+    margin-left: 0px;
+    padding-left: 0;
     list-style: none;
-   display: flex;
-   flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
 
   &__item{
     text-align: left;
-    padding-bottom: 10px;
+    padding: 5px 0;
+    cursor: pointer;
+    &:hover{
+      background-color: #F1FCFF;
+      transition: background-color 0.3s;
+    }
+  }
+
+  &__checkbox{
+  margin-left: 20px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  transition: background-color 0.3s, border-color 0.3s;
+  border: 20px solid #ccc; 
   }
 }

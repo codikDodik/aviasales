@@ -1,0 +1,12 @@
+export const FASTEST = 'FASTEST'
+export const CHEAPEST = 'CHEAPEST'
+export const OPTIMAL = 'OPTIMAL'
+
+export const CHECKED_FILTER = 'CHECKED_FILTER'
+export const ALL_CHECKED_FILTERS = 'ALL_CHECKED_FILTERS'
+
+export const ALL_TICKETS = 'ALL_TICKETS'
+export const WITHOUT_TRANSFER = 'WITHOUT_TRANSFER'
+export const ONE_TRANSFER = 'ONE_TRANSFER'
+export const TWO_TRANSFER = 'TWO_TRANSFER'
+export const THREE_TRANSFER = 'THREE_TRANSFER'
