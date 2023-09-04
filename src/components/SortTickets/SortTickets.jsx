@@ -9,7 +9,6 @@ import classes from './SortTickets.module.scss'
 const SortTickets = () => {
   const dispatch = useDispatch()
   const sortButton = useSelector((state) => state.sortTicketsReducer)
-  console.log(sortButton)
   return (
     <div className={classes.sortTickets}>
       <ul className={classes.sortTickets__list}>

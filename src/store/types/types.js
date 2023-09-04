@@ -10,3 +10,6 @@ export const WITHOUT_TRANSFER = 'WITHOUT_TRANSFER'
 export const ONE_TRANSFER = 'ONE_TRANSFER'
 export const TWO_TRANSFER = 'TWO_TRANSFER'
 export const THREE_TRANSFER = 'THREE_TRANSFER'
+
+export const SEARCH_ID = 'SEARCH_ID'
+export const GET_TICKETS = 'GET_TICKETS'
