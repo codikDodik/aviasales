@@ -10,9 +10,9 @@ html, body {
 
 .App {
   text-align: center;
-  width: 960px;
+  width: 100%;
   background-color: #F3F7FA;
-  min-height: 100vh;
+  height: 100vh;
   &__main{
     display: flex;
   }
@@ -20,7 +20,7 @@ html, body {
     width: 480px;
     height: 50px;
     padding: 0;
-    margin: 0;
+    margin: 0 0 50px 0;
     font-family: $font-family;
     background: $blue;
     color: white;
@@ -31,3 +31,15 @@ html, body {
   }
 }
 
+.error__message {
+  border: 1px solid #ff6b6b;
+  padding: 10px;
+  background-color: papayawhip;
+  color: #ff6b6b;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 30vh;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-family: $font-family;
+}

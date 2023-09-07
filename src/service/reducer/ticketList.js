@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { GET_TICKETS } from '../../store/types/types'
+import { GET_TICKETS, GET_MORE_TICKETS, ERROR_DISPLAY_ON, ERROR_DISPLAY_OFF } from '../../store/types/types'
 
 const initialState = {
   searchId: '',
@@ -8,12 +8,19 @@ const initialState = {
   activeShowTickets: [],
   stop: false,
   payload: true,
-  error: false,
+  error: null,
 }
 
 export const ticketsReducer = (state = initialState, action) => {
-  console.log('ticket reducer', action)
   switch (action.type) {
+  
+  case GET_MORE_TICKETS: {
+    const newQuantityTicketsShow = state.quantityTicketsShow + 5
+    return {
+      ...state,
+      quantityTicketsShow: newQuantityTicketsShow,
+    }
+  }
   case GET_TICKETS: {
     const tickets = action.data.tickets.map(res => {
       return {
@@ -25,6 +32,19 @@ export const ticketsReducer = (state = initialState, action) => {
     return {
       ...state,
       tickets: tickets
+    }
+  }
+  case ERROR_DISPLAY_ON: {
+    return {
+      ...state,
+      error: action.text
+    }
+  }
+
+  case ERROR_DISPLAY_OFF: {
+    return {
+      ...state,
+      error: false
     }
   }
   default:

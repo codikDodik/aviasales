@@ -1,9 +1,26 @@
-import { GET_TICKETS, SEARCH_ID } from '../../store/types/types'
+import { GET_TICKETS, SEARCH_ID, GET_MORE_TICKETS, ERROR_DISPLAY_ON, ERROR_DISPLAY_OFF } from '../../store/types/types'
 
 export const searchID = (key) => ({
   type: SEARCH_ID,
   key,
 })
+
+export function showMoreTickets() {
+  return { type: GET_MORE_TICKETS }
+}
+
+export function errorOn(text) {
+  return {
+    type: ERROR_DISPLAY_ON,
+    text,
+  }
+}
+
+export function errorOff() {
+  return {
+    type: ERROR_DISPLAY_OFF,
+  }
+}
 
 export function getKey() {
   return async (dispatch) => {
@@ -28,9 +45,8 @@ export function getTicketsWithKey() {
         type: GET_TICKETS,
         data: jsonData,
       })
-      console.log(jsonData)
     } catch (error) {
-      console.error(error)
+      dispatch(errorOn('Ошибка API'))
     }
   }
 }

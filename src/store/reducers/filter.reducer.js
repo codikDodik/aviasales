@@ -34,14 +34,14 @@ const initialState = [
     id: 4,
     checked: false,
     quantityStop: 2,
-    text: '2 пересадка',
+    text: '2 пересадки',
     type: TWO_TRANSFER,
   },
   {
     id: 5,
     checked: false,
     quantityStop: 3,
-    text: '3 пересадка',
+    text: '3 пересадки',
     type: THREE_TRANSFER,
   },
 ]

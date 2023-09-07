@@ -34,6 +34,9 @@ const Filter = () => {
       dispatch(checkedFilterAction(id))
     }
   }
+  const handleCheckboxChange = (id) => {
+    changeFilter(id)
+  }
 
   return (
     <div className={classes.filter}>
@@ -49,6 +52,7 @@ const Filter = () => {
                 data-type={type}
                 data-quantitystop={quantityStop}
                 className={classes.filter__checkbox}
+                onChange={() => handleCheckboxChange(id)}
               />
             </label>
             <span className={classes.filter__text}>{text}</span>

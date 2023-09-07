@@ -1,4 +1,4 @@
-// import image from '../../assets/img/S7 Logo.svg'
+/* eslint-disable indent */
 
 import classes from './TicketCards.module.scss'
 
@@ -46,7 +46,6 @@ const TicketCards = ({ data }) => {
 
   const arrivalTime = calculateArrivalTime(formattedDate, formattedDuration)
   const arrivalTimeSecond = calculateArrivalTime(formattedDateSecond, formattedDurationSecond)
-  console.log(formattedDate, formattedDuration)
   const firstTable = (
     <table className={classes.TicketCards__table}>
       <thead className={classes.TicketCards__thead}>
@@ -55,7 +54,13 @@ const TicketCards = ({ data }) => {
             {firstSegment.origin} – {firstSegment.destination}
           </th>
           <th className={classes.TicketCards__th}>В пути</th>
-          <th className={classes.TicketCards__th}>{firstSegment.stops.length} пересадки</th>
+          <th className={classes.TicketCards__th}>
+            {firstSegment.stops.length === 0
+              ? 'Без пересадок'
+              : firstSegment.stops.length === 1
+              ? '1 пересадка'
+              : `${firstSegment.stops.length} пересадки`}
+          </th>
         </tr>
       </thead>
       <tbody className={classes.TicketCards__tbody}>
@@ -77,7 +82,13 @@ const TicketCards = ({ data }) => {
             {secondSegment.origin} – {secondSegment.destination}
           </th>
           <th className={classes.TicketCards__th}>В пути</th>
-          <th className={classes.TicketCards__th}>{secondSegment.stops.length} пересадки</th>
+          <th className={classes.TicketCards__th}>
+            {secondSegment.stops.length === 0
+              ? 'Без пересадок'
+              : secondSegment.stops.length === 1
+              ? '1 пересадка'
+              : `${secondSegment.stops.length} пересадки`}
+          </th>
         </tr>
       </thead>
       <tbody className={classes.TicketCards__tbody}>
@@ -97,7 +108,7 @@ const TicketCards = ({ data }) => {
         <div className={classes.TicketCards__item}>
           <div className={classes.TicketCards__header}>
             <span className={classes.TicketCards__price}>{price} Р</span>
-            <span className={classes.TicketCards__image}> {carrier} </span>
+            <img className={classes.TicketCards__image} src={`https://pics.avs.io/99/36/${carrier}.png`} alt="S7" />
           </div>
           <div className={classes.TicketCards__mainContent}>
             {firstTable}

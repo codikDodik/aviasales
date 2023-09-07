@@ -13,3 +13,8 @@ export const THREE_TRANSFER = 'THREE_TRANSFER'
 
 export const SEARCH_ID = 'SEARCH_ID'
 export const GET_TICKETS = 'GET_TICKETS'
+
+export const GET_MORE_TICKETS = 'GET_MORE_TICKETS'
+
+export const ERROR_DISPLAY_ON = 'ERROR_DISPLAY_ON'
+export const ERROR_DISPLAY_OFF = 'ERROR_DISPLAY_OFF'
